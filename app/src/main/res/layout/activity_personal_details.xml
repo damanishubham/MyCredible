@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             xmlns:android="http://schemas.android.com/apk/res/android"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:id="@+id/linearLayout3">
+
+    <ImageView android:layout_width="wrap_content"
+               android:id="@+id/profilePic"
+               android:clickable="true"
+               android:layout_height="wrap_content"
+               android:background="@drawable/logo_small"
+               app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="@+id/textView2"
+               android:layout_marginLeft="96dp" android:layout_marginStart="96dp"/>
+    <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="@string/personal_details"
+            android:textAlignment="center"
+            android:id="@+id/textView2" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profilePic" app:layout_constraintEnd_toEndOf="parent"/>
+
+    <EditText
+            android:id="@+id/full_name_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/full_name"
+            android:inputType="text"
+            android:layout_marginTop="32dp" app:layout_constraintTop_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginBottom="16dp" app:layout_constraintBottom_toTopOf="@+id/mobile_edit_text"
+            app:layout_constraintVertical_chainStyle="spread_inside"/>
+
+
+    <EditText
+            android:id="@+id/mobile_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/mobile"
+            android:inputType="number"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/full_name_edit_text"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp" app:layout_constraintHorizontal_bias="1.0"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/location_edit_text"/>
+
+    <EditText
+            android:id="@+id/location_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/location"
+            android:inputType="text"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/mobile_edit_text"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/personal_email_edit_text"/>
+
+    <EditText
+            android:id="@+id/personal_email_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/links_edit_text" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/location_edit_text"/>
+
+    <EditText
+            android:id="@+id/links_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:hint="@string/links"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginLeft="16dp" android:layout_marginStart="16dp" android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/personal_email_edit_text"
+            android:layout_marginBottom="8dp" app:layout_constraintBottom_toTopOf="@+id/skills_edit_text"/>
+
+    <EditText
+            android:id="@+id/skills_edit_text"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:hint="@string/skills"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp" android:layout_marginRight="16dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/links_edit_text"
+            app:layout_constraintBottom_toTopOf="@+id/save_button" android:layout_marginBottom="8dp"/>
+
+
+    <Button
+            android:id="@+id/save_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:background="#c5c5c5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp" app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="7dp"
+            app:layout_constraintTop_toBottomOf="@+id/skills_edit_text" android:layout_marginBottom="4dp"/>
+
+</android.support.constraint.ConstraintLayout>
